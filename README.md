@@ -368,6 +368,9 @@ $ git log --since=yesterday
 
 # Shows log by author and searching for specific term inside the commit message
 $ git log --grep "term" --author "name"
+
+# Show log with pretty git branch graph. Remember "A DOG" rule.
+$ git log --all --decorate --oneline --graph
 ```
 
 #### Checking what you are committing
