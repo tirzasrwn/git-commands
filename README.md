@@ -192,19 +192,19 @@ $ git commit
 
 ```sh
 # Creating a local branch
-$ git checkout -b branchname
+$ git checkout -b <branchname>
 
 # Switching between 2 branches (in fact, this would work on terminal as well to switch between 2 directories - $ cd -)
 $ git checkout -
 
 # Pushing local branch to remote
-$ git push -u origin branchname
+$ git push -u origin <branchname>
 
 # Deleting a local branch - this won't let you delete a branch that hasn't been merged yet
-$ git branch -d branchname
+$ git branch -d <branchname>
 
 # Deleting a local branch - this WILL delete a branch even if it hasn't been merged yet!
-$ git branch -D branchname
+$ git branch -D <branchname>
 
 # Remove any remote refs you have locally that have been removed from your remote (you can substitute <origin> to any remote branch)
 $ git remote prune origin
@@ -228,16 +228,13 @@ $ git branch -r
 $ git rebase origin/master
 
 # Pushing local branch after rebasing master into local branch
-$ git push origin +branchname
+$ git push origin +<branchname>
 
 # Rename a branch while pointed to any branch
 $ git branch -m <oldname> <newname>
 
 # Rename current branch
 $ git branch -m <newname>
-
-# Delete the remote branch
-git push origin --delete <branchname>
 ```
 
 #### Fetching and checking out remote branches
@@ -250,8 +247,8 @@ $ git fetch origin
 $ git checkout -b test origin/test
 
 # Deleting a remote branch
-$ git branch -rd origin/branchname
-$ git push origin --delete branchname  or  $ git push origin:branchname
+$ git branch -rd origin/<branchname>
+$ git push origin --delete <branchname>  or  $ git push origin:<branchname>
 ```
 
 #### Merging branch to trunk/master
@@ -261,7 +258,7 @@ $ git push origin --delete branchname  or  $ git push origin:branchname
 $ git checkout trunk/master
 
 # Now merge branch to trunk/master
-$ git merge branchname
+$ git merge <branchname>
 
 # To cancel a merge
 $ git merge --abort
