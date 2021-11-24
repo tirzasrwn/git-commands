@@ -229,6 +229,15 @@ $ git rebase origin/master
 
 # Pushing local branch after rebasing master into local branch
 $ git push origin +branchname
+
+# Rename a branch while pointed to any branch
+$ git branch -m <oldname> <newname>
+
+# Rename current branch
+$ git branch -m <newname>
+
+# Delete the remote branch
+git push origin --delete <branchname>
 ```
 
 #### Fetching and checking out remote branches
