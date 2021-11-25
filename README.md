@@ -116,6 +116,9 @@ $ git add .
 
 # Choosing what changes to add (this will got through all your changes and you can 'Y' or 'N' the changes)
 $ git add -p
+
+# Adding only modified files
+$ git ls-files --modified | xargs git add
 ```
 
 #### Stashing files
